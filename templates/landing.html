@@ -1,0 +1,27 @@
+{% extends "layout.html" %} 
+{% block body %}
+{% include 'nav.html' %}
+  <div class="container-fluid">
+    <h1 class="heading">{{movie|length}} Results for {{key_word}}</h1>
+    <div class="slider">
+      <div class="contain">
+        <div class="row">
+          <div class="row__inner">
+            {% for i in movie %}
+            <div class="tile">
+              <a href="/details/{{i.id}}">
+                  <img class="img-fluid" src="{{i.poster}}" alt="">
+                  <div class="tile__details">
+                    <div class="tile__title">
+                      {{i.title}}
+                    </div>
+                  </div>
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,65 @@
+body {
+    font-family: "Montserrat";
+    background:rgb(29, 29, 29)
+}
+
+button {
+    border-radius:15px;
+    outline:none;
+    border:none;
+    padding: .25em 1em;
+    transition:all .3s;
+}
+
+table {
+    margin:2em;
+}
+
+td {
+    padding:0 .5em;
+    vertical-align: top;
+}
+
+.home {
+    margin-top:2em;
+}
+
+.heading {
+    color:white;
+    font-size:1em;
+    text-align: left;
+    margin:none;
+}
+
+.category {
+    padding:0 5em;
+    margin-top:-1.5em;
+}
+
+.panels {
+    padding: 0 3em;
+}
+
+.navbar {
+    background:none;
+}
+
+#logo {
+    height:4em;
+}
+
+#search {
+    background:none;
+    height:2em;
+    margin-right:1.2em;
+    padding-left:1em;
+    outline:none;
+    border:none;
+    border-bottom:2px solid rgba(200,200,200);
+    color: rgba(200,200,200);
+}
+
+#search::placeholder {
+    font-size: 1em;
+    color: rgba(200,200,200);
+}
