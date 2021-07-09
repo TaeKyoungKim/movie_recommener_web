@@ -1,0 +1,39 @@
+{% extends "layout.html" %} 
+{% block body %}
+{% include 'nav.html' %}
+  <div class="container-fluid">
+    <h1 class="heading">{{movie|length}} Results for {{key_word}}</h1>
+    <div class="slider">
+            <div class="movie">
+              <h2><u>Recommendations:</u></h2>
+              <p>Showing results for: {{ search_name }}</p>
+              <table class="movie_table" align="center">
+                  <tr>
+                      <th>Movie Title</th>
+                      <th>Release Date</th>
+                  </tr>
+                  <tbody class="table_body">
+                    {% for movie_name , movie_date in movie_data %}
+                    <tr>
+                      <td><form method="POST" action="/">
+                        <input id="search" type="text" name="query" value="{{ movie_name }}">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">보기</button>
+                      </form>
+                        {{ movie_name }}
+                      </td>
+                      <td>{{ movie_date }}</td>
+                  </tr>
+            {% endfor %}
+                  </tbody>
+              </table>
+              <br>
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+              <p style="margin-top:3em;">
+              Liked it? Spend a moment from you precious time to provide us valuable feedback. <i class="fas fa-smile"></i> Thank you <i class="fas fa-heart"></i>
+              </p>
+              <p style="color: #919191;">Feedback: <a href="https://forms.gle/7NGyYAvSe7Fepm68A">Google Form Link</a></p>
+              <p style="margin-bottom: 2em; border: 1px solid grey;">Read more on recommendation systems on <a href="https://developers.google.com/machine-learning/recommendation" target="_blank">Google Developers Machine Learning Blogs</a>.</p>
+        </div>
+          </div>
+  </div>
+{% endblock %}
